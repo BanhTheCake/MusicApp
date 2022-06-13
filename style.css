@@ -1,0 +1,248 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    background: rgb(238,174,202);
+    background: linear-gradient(180deg, rgba(238,174,202,0.7684115882681197) 0%, rgba(219,140,226,0.7908205518535539) 100%);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.main {
+    width: 400px;
+    max-width: 100%;
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.next-song {
+    text-align: right;
+    color: #aaa;
+    font-size: 1.6rem;
+    padding-right: 1rem;
+}
+
+.next-song span {
+    color: black;
+}
+
+.cd-thumb {
+    width: 150px;
+    height: 150px;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin: 1rem auto 2rem;
+    box-shadow: 0px 8px 14px 0px rgb(0 0 0 / 30%);
+}
+
+.cd-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cd-name {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.cd-author {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.cd-process {
+    width: 350px;
+    max-width: 95%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+.process-box {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-right: 2rem;
+}
+
+.process-box ion-icon {
+    flex-shrink: 0;
+    font-size: 2.4rem;
+    padding-right: 2rem;
+    color: rgb(40, 40, 40);
+}
+
+#input-process {
+    width: 100%;
+    transition: all .25s linear;
+}
+
+#input-process-volumn {
+}
+input[type=range] {
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    width: 100%; /* Specific width is required for Firefox. */
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    border-radius: 1.3px;
+    background-color: #eee;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background-color: #1ddc20 ;
+    cursor: pointer;
+    margin-top: -8px;
+    box-shadow: 0px 0px 0px 3px white, 0px 0px 0px 4px rgba(0, 0, 0, 0.1);
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #367ebd;
+  }
+  
+.cd-process .time {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1.6rem;
+    font-size: 1.6rem;
+}
+
+.cd-control {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.cd-control ion-icon {
+    padding: 0.6rem;
+}
+
+.song-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 2.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.song-btn .play-btn {
+    margin-right: -4px;
+
+}
+
+.song-btn .pause-btn {
+    display: none;
+}
+
+.song-btn.isPlaying .pause-btn {
+    display: block;
+}
+
+.song-btn.isPlaying .play-btn {
+    display: none;
+}
+
+.second {
+    width: 400px;
+    max-width: 100%;
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 1rem;
+    padding: 2rem 1rem;
+    overflow-y: scroll;
+}
+
+img {
+    width: 20px;
+    height: 20px;
+}
+
+.song-item {
+    display: flex;
+    align-items: center;
+}
+
+.song-item.active .song-name {
+    color: tomato;
+}
+
+.song-item:not(:last-child) {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgb(120, 117, 117);
+    margin-bottom: 1rem;
+}
+
+.song-img {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-right: 1.6rem;
+    margin-left: 1rem;
+}
+
+.song-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.song-info {
+    flex: 1;
+    font-size: 1.6rem;
+}
+
+.song-info .song-author {
+    color: rgb(106, 105, 105);
+    font-size: 1.4rem;
+}
+
+.song-duration {
+    font-size: 2rem;
+    flex-shrink: 0;
+    margin-right: 1rem;
+}
+
+.more-btn {
+    font-size: 3rem;
+    flex-shrink: 0;
+    padding-left: 1rem;
+}
+.random-btn.active,
+.repeat-btn.active {
+    color: tomato;
+}

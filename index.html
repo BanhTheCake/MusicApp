@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <section class="main">
+            <p class="next-song">
+                Next - <span>Banh</span>
+            </p>
+            <div class="cd-thumb">
+                <img src="./assets/img/Song1.jpg" alt="">
+            </div>
+            <p class="cd-name">Summer</p>
+            <p class="cd-author">Banh</p>
+            <div class="cd-process">
+                <div class="process-box">
+                    <ion-icon name="musical-notes"></ion-icon>
+                    <input type="range" name="input-process" id="input-process" min="0" max="100" step="1" value="0">
+                </div>
+                <div class="process-box">
+                    <ion-icon name="volume-mute"></ion-icon>
+                    <input type="range" name="input-process" id="input-process-volumn" min="0" max="100" step="1" value="100">
+                </div> 
+                <audio class="audio" src="./assets/music/Song1.flac"></audio>
+                <div class="time">
+                    <span class="remaining">00:00</span>
+                    <span class="duration">-00:00</span>
+                </div>
+            </div>
+            <div class="cd-control ">
+                <ion-icon class="random-btn" name="shuffle"></ion-icon>
+                <ion-icon class="prev-btn" name="skip-backward"></ion-icon>
+                <div class="song-btn">
+                    <ion-icon class="pause-btn" name="pause"></ion-icon>
+                    <ion-icon class="play-btn" name="play"></ion-icon>
+                </div>
+                <ion-icon class="next-btn" name="skip-forward"></ion-icon>
+                <ion-icon class="repeat-btn" name="repeat"></ion-icon>
+            </div>
+        </section>
+        <section class="second">
+        </section>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
